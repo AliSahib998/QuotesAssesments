@@ -15,7 +15,6 @@ func main() {
 	router := chi.NewRouter()
 	router.Use(middleware.JwtAuthentication)
 	router.Use(middleware.RequestParamsMiddleware)
-	handler.NewHealthHandler(router)
 	handler.NewQuoteHandler(router)
 	handler.NewUserHandler(router)
 	config.LoadESClient()
