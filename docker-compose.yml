@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  app:
+    build: .
+    working_dir: /app
+    ports:
+      - "81:81"
+    links:
+      - redis
+  elasticsearch:
+    image: elasticsearch:8.8.0
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+
+
+
