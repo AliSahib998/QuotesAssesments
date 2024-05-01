@@ -24,7 +24,6 @@ func (q *QuoteClient) GetRandomQuote() (*model.Quote, error) {
 		Get(model.QUOTES_BASE_URL)
 
 	if err != nil {
-		fmt.Println(err)
 		return nil, err
 	}
 
