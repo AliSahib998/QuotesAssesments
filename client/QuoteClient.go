@@ -13,7 +13,6 @@ type QuoteClient struct {
 	Client *resty.Client
 }
 
-// TODO add error handling here
 func (q *QuoteClient) GetRandomQuote() (*model.Quote, error) {
 
 	var quote *model.Quote
