@@ -1,6 +1,9 @@
 package model
 
-import "github.com/dgrijalva/jwt-go"
+import (
+	"github.com/dgrijalva/jwt-go"
+	"time"
+)
 
 type Quote struct {
 	Id           string   `json:"_id"`
@@ -12,16 +15,9 @@ type Quote struct {
 	DateModified string   `json:"dateModified"`
 }
 
-type QuoteDocument struct {
-	Id         string `json:"id"`
-	AuthorSlug string `json:"authorSlug"`
-	Content    string `json:"content"`
-	LikeCount  int    `json:"likeCount"`
-}
-
 type UserRegistration struct {
-	Username string `json:"username"  validate:"required,gte=5,lte=10"`
-	Password string `json:"password"  validate:"required"`
+	Username string `json:"username"  validate:"required,gte=5,lte=15"`
+	Password string `json:"password"  validate:"required,gte=7"`
 	Name     string `json:"name"`
 	Surname  string `json:"surname"`
 }
@@ -36,14 +32,31 @@ type LoginResponse struct {
 }
 
 type SearchQuery struct {
-	QueryString      string `json:"queryString"`
-	SearchField      string `json:"searchField"`
-	SortField        string `json:"sortField"`
-	SortOrder        string `json:"sortOrder"`
-	IsWildCardSearch bool   `json:"isWildCardSearch"`
+	QueryString  string `json:"queryString"`
+	SearchField  string `json:"searchField"`
+	SortField    string `json:"sortField"`
+	SortOrder    string `json:"sortOrder"`
+	IsFullSearch bool   `json:"isFullSearch"`
 }
 
 type Claim struct {
-	Username string
+	Username  string
+	Timestamp time.Time
 	jwt.StandardClaims
+}
+
+type QuoteDocument struct {
+	Id         string `json:"id"`
+	AuthorSlug string `json:"authorSlug"`
+	Content    string `json:"content"`
+	LikeCount  int    `json:"likeCount"`
+}
+
+type UserDocument struct {
+	Id          string    `json:"id"`
+	Username    string    `json:"username"`
+	Password    string    `json:"password"`
+	Name        string    `json:"name"`
+	Surname     string    `json:"surname"`
+	CreatedDate time.Time `json:"createdDate"`
 }

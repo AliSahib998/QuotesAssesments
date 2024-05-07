@@ -25,14 +25,15 @@ func NewQuoteHandler(router *chi.Mux) *QuoteHandler {
 			},
 		},
 	}
-	router.Get("/quote", errhandler.ErrorHandler(h.GetRandomQuote))
+	router.Get("/quote", errhandler.ErrorHandler(h.GetQuote))
 	router.Post("/quote/{id}", errhandler.ErrorHandler(h.LikeQuote))
 	router.Post("/quote/search", errhandler.ErrorHandler(h.SearchQuote))
 	return h
 }
 
-func (q *QuoteHandler) GetRandomQuote(w http.ResponseWriter, r *http.Request) error {
-	resp, err := q.quoteService.GetRandomQuote()
+func (q *QuoteHandler) GetQuote(w http.ResponseWriter, r *http.Request) error {
+	priority := r.URL.Query().Get("priority")
+	resp, err := q.quoteService.GetQuote(priority)
 	if err != nil {
 		return err
 	}

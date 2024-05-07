@@ -49,8 +49,6 @@ func (u *UserHandler) login(w http.ResponseWriter, r *http.Request) error {
 	if err != nil {
 		return err
 	}
-
-	w.WriteHeader(200)
 	w.Header().Set("Content-Type", "application/json")
 	err = json.NewEncoder(w).Encode(resp)
 	return err

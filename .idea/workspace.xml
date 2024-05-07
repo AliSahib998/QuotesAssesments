@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07043882-3a37-4c0d-a66f-d2e3ebcb79be" name="Changes" comment="" />
+    <list default="true" id="07043882-3a37-4c0d-a66f-d2e3ebcb79be" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/QuoteClient.go" beforeDir="false" afterPath="$PROJECT_DIR$/client/QuoteClient.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handler/quoteHandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/quoteHandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handler/userHandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/userHandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repo/elasticRepo.go" beforeDir="false" afterPath="$PROJECT_DIR$/repo/elasticRepo.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/QuoteService.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/QuoteService.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/UserService.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/UserService.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +32,20 @@
   <component name="GOROOT" url="file://$USER_HOME$/go/go1.20.14" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AliSahib998&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="4804ccef-e7b9-4e76-b189-2f8d7fb109e7" />
+        <option name="url" value="https://github.com/AliSahib998/QuotesAssesments.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -40,9 +66,11 @@
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
     "go.import.settings.migrated": "true",
-    "last_opened_file_path": "/Users/sirmammadliaq/Desktop/QuotesAssesments/middleware",
+    "last_opened_file_path": "/Users/sirmammadliaq/Desktop/QuotesAssesments",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -51,7 +79,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "go.sdk",
+    "settings.editor.selected.configurable": "go.vgo",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -106,6 +134,13 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-gosdk-467a64f6063b-ee0e143f3e2b-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-233.11799.228" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -119,6 +154,10 @@
       <workItem from="1714426337406" duration="2965000" />
       <workItem from="1714500447120" duration="5042000" />
       <workItem from="1714505506689" duration="16424000" />
+      <workItem from="1715108362415" duration="232000" />
+      <workItem from="1715108601225" duration="178000" />
+      <workItem from="1715108784051" duration="51000" />
+      <workItem from="1715108842495" duration="131000" />
     </task>
     <servers />
   </component>

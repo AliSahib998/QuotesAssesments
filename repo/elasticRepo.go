@@ -10,8 +10,15 @@ import (
 	"strings"
 )
 
-func Save(index string, data *bytes.Buffer) error {
-	_, err := config.ElasticDb.Index(index, data)
+func SaveDocument(index string, data *bytes.Buffer, id string) error {
+	var esClient = config.ElasticDb
+	_, err := esClient.Index(index, data, esClient.Index.WithDocumentID(id))
+	return err
+}
+
+func UpdateDocument(index string, data *bytes.Buffer, id string) error {
+	var esClient = config.ElasticDb
+	_, err := esClient.Index(index, data, esClient.Index.WithDocumentID(id), esClient.Index.WithRefresh("true"))
 	return err
 }
 
@@ -104,14 +111,14 @@ func extractHitsForQuote(resp string) ([]model.QuoteDocument, error) {
 func buildSearchQuery(query *model.SearchQuery) string {
 	var parts []string
 
-	if len(query.QueryString) > 0 && len(query.SearchField) > 0 && !query.IsWildCardSearch {
+	if len(query.QueryString) > 0 && len(query.SearchField) > 0 && !query.IsFullSearch {
 		matchQuery := fmt.Sprintf(`"query": {
             "match": {
                 "%s": "%s"
             }
         }`, query.SearchField, query.QueryString)
 		parts = append(parts, matchQuery)
-	} else if len(query.QueryString) > 0 && len(query.SearchField) > 0 && query.IsWildCardSearch {
+	} else if len(query.QueryString) > 0 && len(query.SearchField) > 0 && query.IsFullSearch {
 		matchQuery := fmt.Sprintf(`"query": {
         "bool": {
             "should": [
